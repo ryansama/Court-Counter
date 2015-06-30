@@ -4,14 +4,20 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    int teamAScore = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        displayForTeamA(teamAScore);
     }
 
     @Override
@@ -34,5 +40,28 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * Displays the given score for Team A.
+     */
+    public void displayForTeamA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    public void plusThreePoints(View view){
+        teamAScore = teamAScore + 3;
+        displayForTeamA(teamAScore);
+    }
+
+    public void plusTwoPoints(View view){
+        teamAScore = teamAScore + 2;
+        displayForTeamA(teamAScore);
+    }
+
+    public void plusOnePoint(View view){
+        teamAScore = teamAScore + 1;
+        displayForTeamA(teamAScore);
     }
 }
