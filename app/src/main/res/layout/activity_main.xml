@@ -7,7 +7,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#ffccff33">
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,7 +31,8 @@
         android:layout_height="wrap_content"
         android:text="+3 POINTS"
         android:layout_marginBottom="16dp"
-        android:onClick="plusThreePoints"/>
+        android:onClick="plusThreePoints"
+        android:background="#ffff8211"/>
 
     <Button
         android:id="@+id/twoPoints"
@@ -38,7 +40,8 @@
         android:layout_height="wrap_content"
         android:text="+2 POINTS"
         android:layout_marginBottom="16dp"
-        android:onClick="plusTwoPoints"/>
+        android:onClick="plusTwoPoints"
+        android:background="#ffff8211"/>
 
     <Button
         android:id="@+id/freeThrow"
@@ -46,6 +49,7 @@
         android:layout_height="wrap_content"
         android:text="FREE THROW"
         android:layout_marginBottom="16dp"
-        android:onClick="plusOnePoint"/>
+        android:onClick="plusOnePoint"
+        android:background="#ffff8211"/>
 
 </LinearLayout>
