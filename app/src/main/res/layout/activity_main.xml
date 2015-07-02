@@ -2,13 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#ffe5f3ff"
     android:paddingBottom="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -27,9 +25,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:paddingBottom="16dp"
+                android:padding="16dp"
                 android:text="Team A"
-                android:textColor="#000"
+                android:textColor="#95000000"
                 android:textSize="20sp" />
 
             <TextView
@@ -37,16 +35,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:paddingBottom="16dp"
+                android:fontFamily="sans-serif-light"
+                android:paddingBottom="24dp"
                 android:text="0"
                 android:textColor="#000"
-                android:textSize="20sp" />
+                android:textSize="56sp" />
 
             <Button
                 android:id="@+id/threePoints"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:background="#ffff8211"
                 android:onClick="plusThreePointsA"
                 android:text="+3 POINTS" />
@@ -56,6 +57,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:background="#ffff8211"
                 android:onClick="plusTwoPointsA"
                 android:text="+2 POINTS" />
@@ -65,10 +68,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:background="#ffff8211"
                 android:onClick="plusOnePointA"
                 android:text="FREE THROW" />
         </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray">
+
+        </View>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -81,9 +93,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:paddingBottom="16dp"
+                android:padding="16dp"
                 android:text="Team B"
-                android:textColor="#000"
+                android:textColor="#95000000"
                 android:textSize="20sp" />
 
             <TextView
@@ -91,16 +103,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:paddingBottom="16dp"
+                android:fontFamily="sans-serif-light"
+                android:paddingBottom="24dp"
                 android:text="0"
                 android:textColor="#000"
-                android:textSize="20sp" />
+                android:textSize="56sp" />
 
             <Button
                 android:id="@+id/threePointsB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:background="#ffff8211"
                 android:onClick="plusThreePointsB"
                 android:text="+3 POINTS" />
@@ -110,6 +125,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:background="#ffff8211"
                 android:onClick="plusTwoPointsB"
                 android:text="+2 POINTS" />
@@ -119,6 +136,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:background="#ffff8211"
                 android:onClick="plusOnePointB"
                 android:text="FREE THROW" />
@@ -132,6 +151,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:background="#ffff5b5f"
         android:onClick="reset"
+        android:padding="8dp"
         android:text="RESET SCORES" />
 </RelativeLayout>
