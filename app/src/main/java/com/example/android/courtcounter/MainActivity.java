@@ -69,63 +69,70 @@ public class MainActivity extends ActionBarActivity {
 
     /**
      * Adds three points to team A and displays it
+     *
      * @param view
      */
-    public void plusThreePointsA(View view){
+    public void plusThreePointsA(View view) {
         teamAScore = teamAScore + 3;
         displayForTeamA(teamAScore);
     }
 
     /**
      * Adds two points to team A and displays it
+     *
      * @param view
      */
-    public void plusTwoPointsA(View view){
+    public void plusTwoPointsA(View view) {
         teamAScore = teamAScore + 2;
         displayForTeamA(teamAScore);
     }
 
     /**
      * Adds one point to team A and displays it
+     *
      * @param view
      */
-    public void plusOnePointA(View view){
+    public void plusOnePointA(View view) {
         teamAScore = teamAScore + 1;
         displayForTeamA(teamAScore);
     }
 
     /**
      * Adds three points to team B and displays it
+     *
      * @param view
      */
-    public void plusThreePointsB(View view){
+    public void plusThreePointsB(View view) {
         teamBScore = teamBScore + 3;
         displayForTeamB(teamBScore);
     }
 
     /**
      * Adds two points to team B and displays it
+     *
      * @param view
      */
-    public void plusTwoPointsB(View view){
+    public void plusTwoPointsB(View view) {
         teamBScore = teamBScore + 2;
         displayForTeamB(teamBScore);
     }
 
     /**
      * Adds one point to team B and displays it
+     *
      * @param view
      */
-    public void plusOnePointB(View view){
+    public void plusOnePointB(View view) {
         teamBScore = teamBScore + 1;
         displayForTeamB(teamBScore);
     }
 
     /**
      * Resets the two scores and display 0 for each team
+     *
      * @param view
      */
-    public void reset(View view){
+    public void reset(View view) {
         teamAScore = 0;
         teamBScore = 0;
         displayForTeamA(teamAScore);
