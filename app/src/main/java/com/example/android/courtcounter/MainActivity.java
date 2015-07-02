@@ -1,5 +1,6 @@
 package com.example.android.courtcounter;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,12 +13,20 @@ import android.widget.TextView;
 public class MainActivity extends ActionBarActivity {
 
     int teamAScore = 0;
+    int teamBScore = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //initialize scores
         displayForTeamA(teamAScore);
+        displayForTeamB(teamBScore);
+
+        //hide action bar
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
     }
 
     @Override
@@ -50,18 +59,38 @@ public class MainActivity extends ActionBarActivity {
         scoreView.setText(String.valueOf(score));
     }
 
-    public void plusThreePoints(View view){
+    public void displayForTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    public void plusThreePointsA(View view){
         teamAScore = teamAScore + 3;
         displayForTeamA(teamAScore);
     }
 
-    public void plusTwoPoints(View view){
+    public void plusTwoPointsA(View view){
         teamAScore = teamAScore + 2;
         displayForTeamA(teamAScore);
     }
 
-    public void plusOnePoint(View view){
+    public void plusOnePointA(View view){
         teamAScore = teamAScore + 1;
         displayForTeamA(teamAScore);
+    }
+
+    public void plusThreePointsB(View view){
+        teamBScore = teamBScore + 3;
+        displayForTeamB(teamBScore);
+    }
+
+    public void plusTwoPointsB(View view){
+        teamBScore = teamBScore + 2;
+        displayForTeamB(teamBScore);
+    }
+
+    public void plusOnePointB(View view){
+        teamBScore = teamBScore + 1;
+        displayForTeamB(teamBScore);
     }
 }
