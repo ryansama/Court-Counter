@@ -12,8 +12,13 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 
+    //scores
     int teamAScore = 0;
     int teamBScore = 0;
+
+    //variables to save scores for undo buttons
+    int teamASaved = 0;
+    int teamBSaved = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +78,7 @@ public class MainActivity extends ActionBarActivity {
      * @param view
      */
     public void plusThreePointsA(View view) {
+        teamASaved = teamAScore;
         teamAScore = teamAScore + 3;
         displayForTeamA(teamAScore);
     }
@@ -83,6 +89,7 @@ public class MainActivity extends ActionBarActivity {
      * @param view
      */
     public void plusTwoPointsA(View view) {
+        teamASaved = teamAScore;
         teamAScore = teamAScore + 2;
         displayForTeamA(teamAScore);
     }
@@ -93,6 +100,7 @@ public class MainActivity extends ActionBarActivity {
      * @param view
      */
     public void plusOnePointA(View view) {
+        teamASaved = teamAScore;
         teamAScore = teamAScore + 1;
         displayForTeamA(teamAScore);
     }
@@ -103,6 +111,7 @@ public class MainActivity extends ActionBarActivity {
      * @param view
      */
     public void plusThreePointsB(View view) {
+        teamBSaved = teamBScore;
         teamBScore = teamBScore + 3;
         displayForTeamB(teamBScore);
     }
@@ -113,6 +122,7 @@ public class MainActivity extends ActionBarActivity {
      * @param view
      */
     public void plusTwoPointsB(View view) {
+        teamBSaved = teamBScore;
         teamBScore = teamBScore + 2;
         displayForTeamB(teamBScore);
     }
@@ -123,6 +133,7 @@ public class MainActivity extends ActionBarActivity {
      * @param view
      */
     public void plusOnePointB(View view) {
+        teamBSaved = teamBScore;
         teamBScore = teamBScore + 1;
         displayForTeamB(teamBScore);
     }
@@ -136,6 +147,24 @@ public class MainActivity extends ActionBarActivity {
         teamAScore = 0;
         teamBScore = 0;
         displayForTeamA(teamAScore);
+        displayForTeamB(teamBScore);
+    }
+
+    /**
+     * Changes team A's score to the previous state (before the score was last increased).
+     * @param view
+     */
+    public void undoA(View view){
+        teamAScore = teamASaved;
+        displayForTeamA(teamAScore);
+    }
+
+    /**
+     * Changes team B's score to the previous state (before the score was last increased).
+     * @param view
+     */
+    public void undoB(View view){
+        teamBScore = teamBSaved;
         displayForTeamB(teamBScore);
     }
 }

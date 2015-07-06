@@ -83,7 +83,7 @@
                 android:onClick="undoA"
                 android:src="@drawable/undo_button"
                 android:layout_gravity="center_horizontal"
-                android:background="#ff3a71d8"
+                android:background="#ff5fc7d8"
                 android:scaleType="fitXY"
                 android:padding="8dp" />
 
@@ -163,7 +163,7 @@
                 android:onClick="undoB"
                 android:src="@drawable/undo_button"
                 android:layout_gravity="center_horizontal"
-                android:background="#ff3a71d8"
+                android:background="#ff5fc7d8"
                 android:scaleType="fitXY"
                 android:padding="8dp" />
         </LinearLayout>
